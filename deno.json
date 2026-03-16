@@ -1,0 +1,18 @@
+{
+  "imports": {
+    "@oak/oak": "jsr:@oak/oak@^17.2.0",
+    "@tajpouria/cors": "jsr:@tajpouria/cors@^1.2.1"
+  },
+  "deploy": {
+    "project": "6aa7932c-06c6-4b92-a813-5a6cd61ad33a",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [
+      "dist",
+      "api",
+      "deno.json"
+    ],
+    "entrypoint": "api/main.ts"
+  }
+}
