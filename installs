@@ -1,0 +1,2 @@
+deno add npm:@deno/vite-plugin@latest npm:@types/react@latest npm:@vitejs/plugin-react@latest
+deno add jsr:@oak/oak jsr:@tajpouria/cors
