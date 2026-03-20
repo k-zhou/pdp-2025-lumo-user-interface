@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ProgressBar } from './progress-bar.tsx';
-import { CheckButton } from './check-button.tsx';
+import CustomButton from './custom-button.tsx';
 
 interface CheckStep {
   type: 'auto' | 'manual';
@@ -120,7 +120,7 @@ const StartupScreen = ({ onClick }: ButtonProps) => {
             </p>
           </div>
           <div className="content-stretch flex items-center justify-center p-[10px] relative shrink-0">
-            <CheckButton onClick={onFinish} label={"Start machine"} />
+            <CustomButton onClick={onFinish} label={"Start machine"} />
           </div>
         </div>
       </div>
@@ -146,7 +146,7 @@ const StartupScreen = ({ onClick }: ButtonProps) => {
           </p>
         </div>
       </div>
-      {step.type === 'manual' && <CheckButton onClick={handleManualConfirm} label={"Confirmed!"} />}
+      {step.type === 'manual' && <CustomButton onClick={handleManualConfirm} label={"Confirmed!"} />}
     </div>
   );
 }

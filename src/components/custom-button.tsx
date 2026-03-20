@@ -1,9 +1,9 @@
-interface CheckButtonProps {
+interface ButtonProps {
   onClick: () => void;
   label?: string;
 }
 
-export function CheckButton({ onClick, label }: CheckButtonProps) {
+export default function CustomButton({ onClick, label }: ButtonProps) {
   return (
     <div className="content-stretch flex flex-col items-center justify-center relative shrink-0">
       <button
