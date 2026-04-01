@@ -49,14 +49,17 @@ const App = () => {
   };
 
   return (
-    <div className="size-full flex items-center justify-center px-8">
+    <div className="size-full flex flex-col items-center justify-center px-8 gap-4">
+      <hr/>
       {CustomButton({onClick:handleTogglePanel, label:toggleStateLabels.get(screen)})}
-      {screen === 0 && <StartupScreen onClick={handleInit} />}
-      {screen === 1 && <ConfigScreen onStart={handleStart} />}
-      {screen === 2 && <ButtonPanelScreen /> }
-      {screen === 9 && config && (
-        <ProgressScreen config={config} onReset={handleReset} />
-      )}
+      <div>
+        {screen === 0 && <StartupScreen onClick={handleInit} />}
+        {screen === 1 && <ConfigScreen onStart={handleStart} />}
+        {screen === 2 && <ButtonPanelScreen /> }
+        {screen === 9 && config && (
+          <ProgressScreen config={config} onReset={handleReset} />
+        )}
+      </div>
     </div>
   );
 }

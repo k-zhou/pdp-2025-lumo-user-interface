@@ -5,9 +5,9 @@ interface ConfigScreenProps {
 }
 
 const presets: { name: string; tray: number; cores: number }[] = [
-  { name: "Core type 1", tray: 10, cores: 64 },
-  { name: "Core type 2", tray: 20, cores: 128 },
-  { name: "Core type 3", tray: 30, cores: 256 },
+  { name: "Core type 1", tray: 1, cores: 6 },
+  { name: "Core type 2", tray: 2, cores: 8 },
+  { name: "Core type 3", tray: 3, cores: 10 },
 ];
 
 const ConfigScreen = ({ onStart }: ConfigScreenProps) => {
@@ -40,7 +40,9 @@ const ConfigScreen = ({ onStart }: ConfigScreenProps) => {
           <button
             key={preset.name}
             onClick={() => handleSelectPreset(preset)}
-            className={`w-[220px] h-[220px] rounded-[27px] flex flex-col items-center justify-center gap-3 cursor-pointer transition-all duration-200 ${
+            className={`w-[220px] h-[220px] rounded-[27px] 
+              flex flex-col items-center justify-center gap-3 
+              cursor-pointer transition-all duration-200 ${
               selectedCore === preset.name
                 ? "bg-[#08f]/15 ring-3 ring-[#08f] scale-105"
                 : "bg-[#d9d9d9] hover:bg-[#ccc] hover:scale-[1.02]"
