@@ -7,9 +7,9 @@ interface ButtonProps {
 const definedStyles = new Map();
 definedStyles
   .set(0, "bg-[#08f] content-stretch flex      \
-          h-[47px] items-center justify-center \
+          h-[48px] items-center justify-center \
           px-[13px] relative rounded-[100px]   \
-          shrink-0 w-[382px] cursor-pointer    \
+          shrink-1 w-[256px] cursor-pointer    \
           hover:opacity-90 transition-opacity")
   .set(1, "");
 
@@ -23,7 +23,7 @@ export default function CustomButton({ onClick, label, className }: ButtonProps)
       >
         <div className="flex flex-col font-['SF_Pro:Medium',sans-serif] 
           font-[510] justify-center leading-[0] relative shrink-0 text-[22px] 
-          text-center text-white whitespace-nowrap" 
+          text-center text-white whitespah-[64px]ce-nowrap" 
           style={{ fontVariationSettings: "'wdth' 100" }}>
           <p className="leading-[27px]">{ label ||"Confirm"}</p>
         </div>

@@ -3,6 +3,9 @@ import CustomButton from "./custom-button";
 // import { PUBLIC_API_URL } from "$env/static/public"; // This is Svelte's convention / configuration
 // huh so for Vite you need to append the prefix VITE_* to all your env variables
 const PUBLIC_API_URL = import.meta.env.VITE_PUBLIC_API_URL;
+const BUTTON_WIDTH   = 256;
+const BUTTON_HEIGHT  = 256;
+
 
 const handleButton1Get = async () => {
     console.log(`The env file says: ${PUBLIC_API_URL}`);
@@ -45,20 +48,20 @@ const ButtonPanelScreen = () => {
     return (
         <div className="flex flex-col gap-4">
             <div className="flex grid grid-cols-3 gap-4">
-                {CustomButton({onClick:handleButtonHome, label:"Homing", className:"flex-auto gap-4  h-[128px] bg-[#393939]" })}
-                {CustomButton({onClick:handleButtonYMinus, label:"Y Minus", className:"flex-auto gap-4  h-[128px]" })}
-                {CustomButton({onClick:() => null, label:" ", className:"flex-auto gap-4  h-[128px] bg-[#696969]"})}
-                {CustomButton({onClick:handleButtonXPlus, label:"X Plus", className:"flex-auto gap-4  h-[128px]" })}
-                {CustomButton({onClick:() => null, label:" ", className:"flex-auto gap-4  h-[128px] bg-[#696969]"})}
-                {CustomButton({onClick:handleButtonXMinus, label:"X Minus", className:"flex-auto gap-4  h-[128px]" })}
-                {CustomButton({onClick:() => null, label:" ", className:"flex-auto gap-4  h-[128px] bg-[#696969]"})}
-                {CustomButton({onClick:handleButtonYPlus, label:"Y Plus", className:"flex-auto gap-4  h-[128px]" })}
-                {CustomButton({onClick:() => null, label:" ", className:"flex-auto gap-4  h-[128px] bg-[#696969]"})}
+                {CustomButton({onClick:handleButtonHome, label:"Homing", className:`flex-auto gap-4 h-[256px] bg-[#393939]` })}
+                {CustomButton({onClick:handleButtonYMinus, label:"Y Minus", className:`flex-auto gap-4 h-[${BUTTON_HEIGHT}px] w-[${BUTTON_WIDTH}px] rounded-[27px]` })}
+                {CustomButton({onClick:() => null, label:" ", className:`flex-auto gap-4 h-[${BUTTON_HEIGHT}px] w-[${BUTTON_WIDTH}px] rounded-[27px] bg-[#696969]`})}
+                {CustomButton({onClick:handleButtonXPlus,  label:"X Plus",  className:`flex-auto gap-4 h-[${BUTTON_HEIGHT}px] rounded-[27px] w-[${BUTTON_WIDTH}px]` })}
+                {CustomButton({onClick:() => null, label:" ", className:`flex-auto gap-4 h-[${BUTTON_HEIGHT}px] w-[${BUTTON_WIDTH}px] bg-[#696969]`})}
+                {CustomButton({onClick:handleButtonXMinus, label:"X Minus", className:`flex-auto gap-4 h-[${BUTTON_HEIGHT}px] w-[${BUTTON_WIDTH}px]` })}
+                {CustomButton({onClick:() => null, label:" ", className:`flex-auto gap-4 h-[${BUTTON_HEIGHT}px] w-[${BUTTON_WIDTH}px] bg-[#696969]`})}
+                {CustomButton({onClick:handleButtonYPlus,  label:"Y Plus",  className:`flex-auto gap-4 h-[${BUTTON_HEIGHT}px] w-[${BUTTON_WIDTH}px]` })}
+                {CustomButton({onClick:() => null, label:" ", className:`flex-auto gap-4 h-[${BUTTON_HEIGHT}px] w-[${BUTTON_WIDTH}px] bg-[#696969]`})}
             </div>
             <hr />
             <div className="grid grid-cols-3 gap-4">
-                {CustomButton({onClick:handleButton1Get,  label:"Button 1, Get", className:"flex-auto gap-4  h-[64px]" })}
-                {CustomButton({onClick:handleButton1Post, label:"Button 1, Post", className:"flex-auto gap-4  h-[64px]" })}
+                {CustomButton({onClick:handleButton1Get,  label:"Button 1, Get", className:"flex-auto gap-4 h-[64px]" })}
+                {CustomButton({onClick:handleButton1Post, label:"Button 1, Post", className:"flex-auto gap-4 h-[64px]" })}
             </div>
         </div>
     );

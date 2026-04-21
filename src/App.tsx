@@ -48,10 +48,13 @@ const App = () => {
     setScreen(1);
   };
 
+
+  // 8*toggleStateLabels.get(screen).length}
+
   return (
     <div className="size-full flex flex-col items-center justify-center px-8 gap-4">
       <hr/>
-      {CustomButton({onClick:handleTogglePanel, label:toggleStateLabels.get(screen)})}
+      {CustomButton({onClick:handleTogglePanel, label:toggleStateLabels.get(screen), className:`w-[240px]`})} 
       <div>
         {screen === 0 && <StartupScreen onClick={handleInit} />}
         {screen === 1 && <ConfigScreen onStart={handleStart} />}
