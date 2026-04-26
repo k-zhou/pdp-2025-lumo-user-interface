@@ -1,9 +1,11 @@
 import SinglePageApp from "./components/SinglePageApp";
+import Clicking from "./components/Clicking";
 
 const App = () => {
   return (
-    <SinglePageApp />
+    <Clicking />
   )
 }
 
+/* <SinglePageApp /> */
 export default App;
