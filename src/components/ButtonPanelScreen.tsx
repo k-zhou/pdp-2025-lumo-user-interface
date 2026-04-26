@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CustomButton from "./custom-button";
+import CustomButton from "@components/custom-button";
 // import { PUBLIC_API_URL } from "$env/static/public"; // This is Svelte's convention / configuration
 // huh so for Vite you need to append the prefix VITE_* to all your env variables
 const PUBLIC_API_URL = import.meta.env.VITE_PUBLIC_API_URL;
