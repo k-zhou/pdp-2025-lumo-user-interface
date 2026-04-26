@@ -21,9 +21,9 @@ export default function CustomButton({ onClick, label, className }: ButtonProps)
         onClick={onClick}
         className={definedStyles.get(0) + className }
       >
-        <div className="flex flex-col font-['SF_Pro:Medium',sans-serif] 
+        <div className="font-['SF_Pro:Medium',sans-serif] 
           font-[510] justify-center leading-[0] relative shrink-0 text-[22px] 
-          text-center text-white whitespah-[64px]ce-nowrap" 
+          text-center text-white whitespace-nowrap" 
           style={{ fontVariationSettings: "'wdth' 100" }}>
           <p className="leading-[27px]">{ label ||"Confirm"}</p>
         </div>

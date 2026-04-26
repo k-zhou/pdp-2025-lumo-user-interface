@@ -33,17 +33,17 @@ const SinglePageApp = () => {
     }
   };
   
-  const handleInit = () => {
+  const handleStartupClick = () => {
     setConfig(null);
     setScreen(1);
   };
   
-  const handleStart = (cfg: Config) => {
+  const handleConfigStartClick = (cfg: Config) => {
     setConfig(cfg);
     setScreen(9);
   };
   
-  const handleReset = () => {
+  const handleProgressFinishedClick = () => {
     setConfig(null);
     setScreen(1);
   };
@@ -54,15 +54,13 @@ const SinglePageApp = () => {
   return (
     <div className="size-full flex flex-col items-center justify-center px-8 gap-4">
     <hr/>
-    {CustomButton({onClick:handleTogglePanel, label:toggleStateLabels.get(screen), className:`w-[240px]`})} 
-    <div>
-    {screen === 0 && <StartupScreen onClick={handleInit} />}
-    {screen === 1 && <ConfigScreen onStart={handleStart} />}
-    {screen === 2 && <ButtonPanelScreen /> }
-    {screen === 9 && config && (
-      <ProgressScreen config={config} onReset={handleReset} />
-    )}
-    </div>
+    {CustomButton({onClick:handleTogglePanel, label:toggleStateLabels.get(screen), className:`text-orange-100`})} 
+      <div>
+      {screen === 0 && <StartupScreen onClick={handleStartupClick} />}
+      {screen === 1 && <ConfigScreen onStart={handleConfigStartClick} />}
+      {screen === 2 && <ButtonPanelScreen /> }
+      {screen === 9 && config && <ProgressScreen config={config} onReset={handleProgressFinishedClick} />}
+      </div>
     </div>
   );
 };
