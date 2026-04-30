@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@deno/vite-plugin": "^1.0.6",
+    "@micropython/micropython-webassembly-pyscript": "^1.28.0-6",
+    "@pyscript/core": "^0.7.19",
     "@tailwindcss/vite": "^4.2.1",
     "@types/react": "^19.2.14",
     "@vitejs/plugin-react": "^6.0.1",

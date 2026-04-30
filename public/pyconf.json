@@ -1,0 +1,10 @@
+{
+  "files": {
+    "Camera-Settings.py": "./Camera-Settings.py",
+    "Camera-vision.py": "./Camera-vision.py",
+    "coordinates,txt": "./coordinates.txt",
+    "helpers.py": "./helpers.py",
+    "main.py": "./main.py"
+  },
+  "packages": ["opencv-python", "numpy", "pandas"]
+}

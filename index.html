@@ -4,10 +4,30 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Pyscript ---->
+    <script type="module" src="/pyscript/core.js"></script>
+    <link rel="stylesheet" href="pyscript/core.css" />
+    <!-- -------- ---->
     <title>PDP 2025 Lumo User Interface</title>
   </head>
   <body>
     <div id="root"></div>
+    <!-- Main Javascript  -->
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- This should be in a config file, using mpy-config for brevity. -->
+    <mpy-config>
+      interpreter = "/micropython/micropython.mjs"
+    </mpy-config>
+    <!-- <script type="mpy">
+      from pyscript import document
+    </script> -->
+
+    <!-- Runs Python code -->
+    <script type="py" config="./pyconf.json" src="./main.py"></script>
+    <!-- <script type="mpy" mpy-config="./pyconf.json" src="./main.py"></script> -->
+     
+    <div id="output"></div>
+    
   </body>
 </html>

@@ -1,0 +1,11 @@
+Saved Camera Settings
+==============================
+Brightness: 50
+Contrast: 50
+Saturation: 50
+Sharpness: 50
+Exposure: 50
+Zoom: 36
+Rotate: 0
+Flip H: 0
+Flip V: 0

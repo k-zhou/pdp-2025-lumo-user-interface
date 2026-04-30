@@ -1,0 +1,11 @@
+Line coordinates (real world in mm)
+========================================
+Line 1:
+  Start: (179.8, 32.3) mm
+  End:   (178.6, 183.3) mm
+Line 2:
+  Start: (52.7, 29.7) mm
+  End:   (51.7, 197.8) mm
+Line 3:
+  Start: (140.0, 198.2) mm
+  End:   (105.7, 197.7) mm
